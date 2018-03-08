@@ -1,0 +1,22 @@
+{
+    "name": "ya-dzen",
+    "description": "Ya-Dzen (Sass, Browsersync, Uglify, cleanCSS, Autoprefixer)",
+    "main": "index.js",
+    "authors": [
+        "marfuzzi"
+    ],
+    "license": "ISC",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "devDependencies": {
+        "normalize-css": "normalize.css#^7.0.0",
+        "font-awesome": "^4.7.0"
+    }
+}
+
+
