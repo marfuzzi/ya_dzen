@@ -113,46 +113,47 @@ const data = [
     },
 ];
 
-function getTagPicture(image, size, title) {
-    return `
-    <picture>
-        <source media="(min-width: 1024px)" srcset=${getImage(image, 3)}>
-        <source media="(min-width: 512px)" srcset=${getImage(image, 2)}>
-        <img class="card__image_${size}" src=${getImage(image, 2)} srcset=${getImage(image,3)} alt=${title}>
-    </picture>
-    `
-};
 
 function getImage(path, multiplier) {
     const arrPath = path.split('.');
     arrPath[0] = `${arrPath[0]}@${multiplier}x`;
     return arrPath.join('.');
-};
+}
+
+function getTagPicture(image, size, title) {
+    return `
+    <picture>
+        <source media="(min-width: 1024px)" srcset=${getImage(image, 3)}>
+        <source media="(min-width: 512px)" srcset=${getImage(image, 2)}>
+        <img class="card__image card__image_${size}" src=${getImage(image, 2)} srcset=${getImage(image, 3)} alt=${title}>
+    </picture>
+    `;
+}
 
 function getActions(size, channelName) {
     return `
         <div class="card__actions card__actions_${size}">
-            ${channelName ? `<div class="channelName">${channelName}</div>`: ''}
+            ${channelName ? `<div class="channelName YSText-Bold">${channelName}</div>` : ''}
             <div class="more"></div>
             <div class="like"></div>
         </div>
-    `
-};
+    `;
+}
 
 function getDescription(size, description) {
     return `
-        <div class="card__description_${size} YSText-Regular">${description}</div>
-    `
-};
+        <div class="card__description card__description_${size} YSText-Regular">${description}</div>
+    `;
+}
 
 function getTitle(mod, titleColor, title) {
     return `
         <div class="card__title card__title_${mod} YSText-Bold" style="color: ${titleColor}">${title}</div>
-    `
-};
+    `;
+}
 
-function largeCardTemplate(card){
-    const {title, titleColor, description, image, size} = card;
+function largeCardTemplate(card) {
+    const { title, titleColor, description, image, size } = card;
     return `
     <div class="card card_${size}">
         <div class = "card__wrapper_${size}">${getTagPicture(image, size, title)}</div>
@@ -162,11 +163,11 @@ function largeCardTemplate(card){
             ${getActions(size)}
         </div>
     </div>
-    `
-};
+    `;
+}
 
 function mediumCardTemplate(card) {
-    const {title, titleColor, description, image, size} = card;
+    const { title, titleColor, description, image, size } = card;
     return `
         <div class="card card_${size}">
             ${getTitle(size, titleColor, title)}
@@ -177,19 +178,19 @@ function mediumCardTemplate(card) {
             </div>
         </div>
     `;
-};
+}
 
 function smallCardTemplate(card) {
-    const {title, titleColor, image, description, channelName, size} = card;
-    const sMod = image ? size : 's-text'
+    const { title, titleColor, image, description, channelName, size } = card;
+    const sMod = image ? size : 's-text';
     return `
         <div class="card card_${size}">
             ${getTitle(sMod, titleColor, title)}
             ${image ? `${getTagPicture(image, size, title)}` : `${getDescription(size, description)}`}
             ${getActions(sMod, channelName)}
         </div>
-    `
-};
+    `;
+}
 
 
 const cards = data.map(card => {
