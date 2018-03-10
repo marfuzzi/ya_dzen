@@ -1,55 +1,229 @@
-@import "vars"
+@media (min-width: 1451px)
+    body
+        width: 1300px
 
-/*==========  Desktop First  ==========*/
+    .header__logo
+        width: 120px
+        height: 30px
 
-/* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
-    /**/
+    .content
+         grid-gap: 50px 30px
 
+    .card__title_l
+        max-height: 200px
+        font-size: 25px
+        line-height: 25px
 
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-    /**/
+    .card__description_l
+        max-height: 200px
+        font-size: 20px
+        line-height: 22px
 
+    .card__image_m
+        max-height: 400px
 
-/* Small Devices, Tablets */
+    .card__title_m
+        max-height: 100px
+        font-size: 25px
+        line-height: 25px
+
+    .card__description_m
+        max-height: 110px
+        font-size: 20px
+        line-height: 22px
+
+    .card__title_s
+        font-size: 22px
+
+    .card__image_s
+        max-height: 330px
+
+    .card__title_s-text
+        font-size: 22px
+        margin-bottom: 15px
+
+    .card__description_s
+        max-height: 245px
+        font-size: 20px
+        line-height: 22px
+
+    .channelName
+        font-size: 20px
+        line-height: 22px
+
+@media (min-width: 1250px) and (max-width: 1450px)
+    body
+        width: 980px
+
+    .header__logo
+        width: 110px
+        height: 25px
+
+    .content
+         grid-gap: 40px 20px
+
+    .card__title_l
+        max-height: 70px
+        font-size: 20px
+
+    .card__description_l
+        max-height: 200px
+        font-size: 16px
+        line-height: 22px
+
+    .card__image_m
+        max-height: 300px
+
+    .card__title_m
+        max-height: 70px
+        font-size: 20px
+
+    .card__description_m
+        max-height: 90px
+        font-size: 16px
+        line-height: 22px
+
+    .card__title_s
+        font-size: 18px
+
+    .card__title_s-text
+        font-size: 18px
+
+    .card__description_s
+        max-height: 200px
+        font-size: 16px
+        line-height: 22px
+
+    .channelName
+        font-size: 16px
+        line-height: 22px
+
+@media only screen and (max-width: 1249px)
+    body
+        width: 704px
+
 @media only screen and (max-width : 768px)
-    /**/
+    body
+        width: calc(100% - 30px)
 
+@media only screen and (max-width : 768px)
+    body
+        width: calc(100% - 30px)
 
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
-    /**/
+    .header__logo
+        margin-bottom: 20px
 
+    .card__description_m
+        display: none
 
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
-    /**/
+    .card__content_m
+        position: absolute
+        top: 65px
+        right: 0
+        height: calc(100% - 80px)
+        margin-bottom: 0
 
+    .card__actions_s
+        height: calc(100% - 65px)
+        top: 55px
 
-/*==========  Mobile First  ==========*/
+    .card__title_s
+        max-height: 55px
+        font-size: 17px
+        line-height: 25px
 
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px)
-    /**/
+    .card__description_s
+        max-height: 55px
+        line-height: 18px
 
+@media only screen and (max-width : 620px)
+    .card__description_l
+        max-height: 60px
 
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px)
-    /**/
+    .card__title_l
+        max-height: 80px
+        margin-top: 10px
 
+    .card__actions_m
+        height: 70%
+        top: 55px
 
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px)
-    /**/
+    .card_s
+        grid-column: span 3
 
+    .card__description_s
+        max-height: 180px
 
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px)
-    /**/
+    .card__actions_s-text
+        position: relative
+        bottom: 0
+        margin-top: 10px
 
+@media only screen and (max-width : 530px)
+    body
+        width: calc(100% - 100px)
 
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px)
-    /**/
+    .content
+        grid-gap: 20px 15px
+
+    .card_m
+        grid-column: span 6
+
+    .card_s
+        grid-column: span 3
+
+    .card__description_l
+        display: none
+
+    .card__content_l
+        position: absolute
+
+    .card__actions_l
+        position: relative
+        bottom: 0
+
+    .card__title_l
+        margin-top: 0
+
+    .card__wrapper_l
+        grid-column: span 3
+
+    .card__image_l
+        margin-top: 55px
+
+    .card__image_m
+        margin-top: 30px
+
+    .card__content_m
+        height: calc(100% - 40px)
+
+@media only screen and (max-width : 450px)
+    .card_s
+        grid-column: span 6
+@media only screen and (max-width : 410px)
+    .content
+        grid-gap: 15px 15px
+
+    .card_m
+        grid-column: span 6
+
+    .card_s
+        grid-column: span 6
+
+    .card__content_l
+        position: absolute
+
+    .card__actions_l
+        bottom: 0
+        position: relative
+
+    .card__title_l
+        margin-top: 0
+
+    .card__wrapper_l
+        grid-column: span 3
+
+    .card__image_l
+        margin-top: 55px
+
 
