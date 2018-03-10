@@ -9,7 +9,8 @@ const gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css'),
     rename = require('gulp-rename'),
     autoprefixer = require('gulp-autoprefixer'),
-    notify = require("gulp-notify");
+    notify = require("gulp-notify"),
+    babel = require('gulp-babel');
 
 // Сервер и автообновление страницы Browsersync
 gulp.task('browser-sync', function() {
@@ -26,6 +27,9 @@ gulp.task('js', function() {
     return gulp.src([
         'app/js/common.js', // Всегда в конце
         ])
+    .pipe(babel({
+        presets: ['env']
+    }))
     .pipe(concat('scripts.min.js'))
     .pipe(uglify()) // Минимизировать весь js (на выбор)
     .pipe(gulp.dest('app/js'))
